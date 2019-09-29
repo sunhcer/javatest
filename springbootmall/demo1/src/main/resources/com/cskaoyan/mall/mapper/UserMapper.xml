@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cskaoyan.mall.mapper.UserMapper">
+
+    <select id="isAdminExistByNameAndPassword" resultType="com.cskaoyan.mall.bean.Admin">
+        select account,pwd from admin where account=#{account} and pwd=#{pwd}
+    </select>
+
+    <select id="queryAllAdmins" resultType="com.cskaoyan.mall.bean.Admin">
+        select id,account,token,name,pwd from admin
+    </select>
+</mapper>

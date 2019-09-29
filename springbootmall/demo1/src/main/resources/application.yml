@@ -1,0 +1,41 @@
+#server port
+#不管后缀是什么这里,他只会读取application的前缀的
+server:
+  port: 80
+#context path
+#  servlet:
+#    context-path: /admin
+
+#给demo1设定一个全局变量
+demo1:
+  param1: 江南style--同一首歌--水煮肉片
+
+myfile:
+  config:
+    filePath: F://英雄时刻/
+    fileType: .jpg
+#myfile:
+  #  config:
+  #    file-path: d://spring
+  #    file-type: .jpg
+  #    value: ${random.int(10)}
+  #    pic-file-path: ${myfile.config.file-path}/pic/${my.user}
+  #    excel-file-path: ${myfile.config.file-path}/excel
+#spring:
+#  freemarker:
+#  template-loader-path: classpath:/templates/
+#  suffix: .ftl
+#取决于你的自动配置类→ConfigurationProperties（prefix+成员变量）
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydb2?useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/mydb2?useUnicode=true&characterEncoding=utf-8
+#    username: root
+#    password: 123456
